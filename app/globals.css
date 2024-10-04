@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -33,18 +9,47 @@ body {
 }
 
 @layer base {
-  .border-outline-2 {
-    -webkit-text-stroke: 2px #E2AA06;
-  }
+  .border-outline {
+    -webkit-text-stroke: 0.5vw #609CFF;
+  }  
+}
 
-  .border-outline-1 {
-    -webkit-text-stroke: 1px #E2AA06;
-  }
+.top-right-arrow {
+  border-left: 1.5vw solid transparent;
+  border-top: 1.5vw solid #609CFF;
+}
 
+.faq-b-r{
+  border-top-width:3px;
+}
+.faq-t-l{
+  border-bottom-width:3px;
 }
 
 hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
+}
+
+.terminal-input:focus {
+  outline: none;
+}
+
+.terminal-input {
+  background-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 0 #E2AA06;
+}
+
+/*
+.terminal-inputlol {
+  -webkit-tap-highlight-color :black;
+  content: '_';
+  position: absolute;
+  color: #3b82f6;  blue-500 
+  animation: blink 1s step-end infinite;
+}*/
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }

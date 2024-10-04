@@ -9,10 +9,15 @@ const config: Config = {
   ],
   theme: {
     colors:{
-      brand:"#E2AA06",
+      brand:"#609CFF",
+      orgs:"#E2AA06",
+      faq:"#00FF84",
+      partner:"#F84335",
       blite:"#FBBC0440",
       black:"#000000",
-      grey:"#D9D9D90D",
+      white:"#FFFFFF",
+      timeline:'#C23B30',
+      grey:"#CCCCCC",
     },
     extend: {
       backgroundImage: {
@@ -25,10 +30,21 @@ const config: Config = {
         chakra: ["var(--font-chakra)"],
       },
       dropShadow: {
-        glow: [
-          "0 0px 20px rgba(220,170, 6, 1)",
-
-        ]
+        gold: [
+          "0 0 1vw rgba(220,170, 6, 1)",
+        ],
+        green: [
+          "0 0px 1vw rgba(0,255,132, 1)",
+        ],
+        red: [
+          "0 0 1vw rgba(248,57,63, 1)",
+        ],
+        redmini: [
+          "0 0 1vw rgba(248,57,63, 1)",
+        ],
+        blue: [
+          "0 0 1vw rgba(96,156,255, 1)",
+        ]        
       },
       maxWidth: {
         '1/5': '20%',
